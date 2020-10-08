@@ -257,7 +257,7 @@ MYSQL_USER=default
 MYSQL_PASSWORD=secret
 MYSQL_PORT=3306
 MYSQL_ROOT_PASSWORD=root
-MYSQL_ENTRYPOINT_INITDB=./mysql/docker-entrypoint-initdb.d
+MYSQL_ENTRYPOINT_INITDB=./mysql/docker-entrypoint-initdb.d/production
 
 ### REDIS #################################################
 
@@ -821,7 +821,7 @@ GEARMAN_MYSQL_PORT=3306
 # Mysql server user (Default: root)
 GEARMAN_MYSQL_USER=root
 # Mysql password
-GEARMAN_MYSQL_PASSWORD=	
+GEARMAN_MYSQL_PASSWORD=
 # Path to file with mysql password(Docker secrets)
 GEARMAN_MYSQL_PASSWORD_FILE=
 # Database to use by Gearman (Default: Gearmand)
