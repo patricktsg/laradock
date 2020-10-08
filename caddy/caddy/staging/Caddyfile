@@ -67,3 +67,65 @@ social-staging.onbrand.services {
     #   dns cloudflare
     # }
 }
+
+staging.brandhub.online {
+    root /var/www/brandhub-staging/public;
+
+    fastcgi / php-fpm:9000 php {
+        index index.php
+    }
+
+    # To handle .html extensions with laravel change ext to
+    # ext / .html
+
+    rewrite {
+        to {path} {path}/ /index.php?{query}
+    }
+
+    gzip
+    browse
+    log /var/log/caddy/staging-brandhub-online-access.log
+    errors /var/log/caddy/staging-brandhub-online-error.log
+
+    # Uncomment to enable TLS (HTTPS)
+    # Change the first list to listen on port 443 when enabling TLS
+    # tls self_signed
+    tls support@onbrandhq.com
+
+    # To use Lets encrpt tls with a DNS provider uncomment these
+    # lines and change the provider as required
+    # tls {
+    #   dns cloudflare
+    # }
+}
+
+staging.tnt.onbrandhub.com {
+    root /var/www/tnt-staging/public;
+
+    fastcgi / php-fpm:9000 php {
+        index index.php
+    }
+
+    # To handle .html extensions with laravel change ext to
+    # ext / .html
+
+    rewrite {
+        to {path} {path}/ /index.php?{query}
+    }
+
+    gzip
+    browse
+    log /var/log/caddy/staging-tnt-onbrandhub-com-access.log
+    errors /var/log/caddy/staging-tnt-onbrandhub-com-error.log
+
+    # Uncomment to enable TLS (HTTPS)
+    # Change the first list to listen on port 443 when enabling TLS
+    # tls self_signed
+    tls support@onbrandhq.com
+
+    # To use Lets encrpt tls with a DNS provider uncomment these
+    # lines and change the provider as required
+    # tls {
+    #   dns cloudflare
+    # }
+}
