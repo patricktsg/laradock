@@ -254,10 +254,10 @@ APACHE_DOCUMENT_ROOT=/var/www/
 MYSQL_VERSION=5.7
 MYSQL_DATABASE=default
 MYSQL_USER=default
-MYSQL_PASSWORD=secret
+MYSQL_PASSWORD=AcsvPAgZtn4gjaA2myvQdF47W5bmMJkv
 MYSQL_PORT=3306
-MYSQL_ROOT_PASSWORD=root
-MYSQL_ENTRYPOINT_INITDB=./mysql/docker-entrypoint-initdb.d
+MYSQL_ROOT_PASSWORD=bgt3V5QTqEq2rstBZgDcHNMDhuz4Wnjy
+MYSQL_ENTRYPOINT_INITDB=./mysql/docker-entrypoint-initdb.d/production
 
 ### REDIS #################################################
 
@@ -821,7 +821,7 @@ GEARMAN_MYSQL_PORT=3306
 # Mysql server user (Default: root)
 GEARMAN_MYSQL_USER=root
 # Mysql password
-GEARMAN_MYSQL_PASSWORD=	
+GEARMAN_MYSQL_PASSWORD=
 # Path to file with mysql password(Docker secrets)
 GEARMAN_MYSQL_PASSWORD_FILE=
 # Database to use by Gearman (Default: Gearmand)
