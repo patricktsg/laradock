@@ -27,6 +27,11 @@ If you need to create a new DB open `mysql/docker-entrypoint-initdb.d/createdb.s
 
 #### Staging environment:
 
+* Checkout Laradock
+* Clone the env-example-staging into .env
+* Update the MYSQL_ROOT_PASSWORD and MYSQL_PASSWORD with some sensible and secure password
+* Check out the projects Laradock will serve into the same root folder as this
+
 ```
 docker-compose -f docker-compose.yml -f docker-compose.staging.yml up -d mysql caddy
 ```

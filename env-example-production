@@ -320,9 +320,9 @@ APACHE_INSTALL_HTTP2=false
 MYSQL_VERSION=5.7
 MYSQL_DATABASE=default
 MYSQL_USER=default
-MYSQL_PASSWORD=AcsvPAgZtn4gjaA2myvQdF47W5bmMJkv
+MYSQL_PASSWORD=
 MYSQL_PORT=3306
-MYSQL_ROOT_PASSWORD=bgt3V5QTqEq2rstBZgDcHNMDhuz4Wnjy
+MYSQL_ROOT_PASSWORD=
 MYSQL_ENTRYPOINT_INITDB=./mysql/docker-entrypoint-initdb.d/production
 
 ### REDIS #################################################
