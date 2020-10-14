@@ -31,10 +31,14 @@ If you need to create a new DB open `mysql/docker-entrypoint-initdb.d/createdb.s
 * Clone the env-example-staging into .env
 * Update the MYSQL_ROOT_PASSWORD and MYSQL_PASSWORD with some sensible and secure password
 * Check out the projects Laradock will serve into the same root folder as this
+* Make sure Caddy configuration is right and all those domains are pointing to the server
+* Execute the following command
 
 ```
 docker-compose -f docker-compose.yml -f docker-compose.staging.yml up -d mysql caddy
 ```
+
+* Manually set up each project within the container
 
 #### Production environment:
 
