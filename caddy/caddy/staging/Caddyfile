@@ -129,3 +129,23 @@ staging.onbrand.brandhub.online {
     #   dns cloudflare
     # }
 }
+
+staging.app.brandhub.online {
+    root /var/www/onbrand-fontend
+
+    gzip
+    browse
+    log /var/log/caddy/staging-app-access.log
+    errors /var/log/caddy/staging-app-error.log
+
+    # Uncomment to enable TLS (HTTPS)
+    # Change the first list to listen on port 443 when enabling TLS
+    # tls self_signed
+    tls support@onbrandhq.com
+
+    # To use Lets encrpt tls with a DNS provider uncomment these
+    # lines and change the provider as required
+    # tls {
+    #   dns cloudflare
+    # }
+}
