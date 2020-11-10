@@ -1,4 +1,4 @@
-media-staging.onbrand.services {
+staging.media.onbrand.services {
     root /var/www/media/public
 
     fastcgi / php-fpm:9000 php {
@@ -37,7 +37,7 @@ media-staging.onbrand.services {
     }
 }
 
-social-staging.onbrand.services {
+staging.social-accounts.onbrand.services {
     root /var/www/social-accounts/public
 
     fastcgi / php-fpm:9000 php {
@@ -68,8 +68,8 @@ social-staging.onbrand.services {
     # }
 }
 
-staging.brandhub.online {
-    root /var/www/brandhub-staging/public;
+staging.tnt.onbrand.rocks {
+    root /var/www/onbrand-enterprise/public
 
     fastcgi / php-fpm:9000 php {
         index index.php
@@ -84,8 +84,8 @@ staging.brandhub.online {
 
     gzip
     browse
-    log /var/log/caddy/staging-brandhub-online-access.log
-    errors /var/log/caddy/staging-brandhub-online-error.log
+    log /var/log/caddy/staging-onbrand-enterprise-access.log
+    errors /var/log/caddy/staging-onbrand-enterprise-error.log
 
     # Uncomment to enable TLS (HTTPS)
     # Change the first list to listen on port 443 when enabling TLS
@@ -99,8 +99,8 @@ staging.brandhub.online {
     # }
 }
 
-staging.tnt.onbrandhub.com {
-    root /var/www/tnt-staging/public;
+staging.onbrand.brandhub.online {
+    root /var/www/onbrand-brandhub/public
 
     fastcgi / php-fpm:9000 php {
         index index.php
@@ -115,8 +115,8 @@ staging.tnt.onbrandhub.com {
 
     gzip
     browse
-    log /var/log/caddy/staging-tnt-onbrandhub-com-access.log
-    errors /var/log/caddy/staging-tnt-onbrandhub-com-error.log
+    log /var/log/caddy/staging-onbrand-brandhub-access.log
+    errors /var/log/caddy/staging-onbrand-brandhub-error.log
 
     # Uncomment to enable TLS (HTTPS)
     # Change the first list to listen on port 443 when enabling TLS

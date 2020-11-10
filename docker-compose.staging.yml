@@ -6,3 +6,18 @@ services:
     mysql:
       ports:
         - "${MYSQL_PORT}:3306"
+
+    nginx:
+      networks:
+        frontend:
+          aliases:
+            - beta.staging.brandhub.online
+            - staging.tnt.onbrandhub.com
+            - media-staging.onbrand.services
+            - social-staging.onbrand.services
+        backend:
+          aliases:
+            - beta.staging.brandhub.online
+            - staging.tnt.onbrandhub.com
+            - media-staging.onbrand.services
+            - social-staging.onbrand.services
